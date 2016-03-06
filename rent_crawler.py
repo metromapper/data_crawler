@@ -67,7 +67,7 @@ for i in xrange(0, len(lines)):
         for k in xrange(0, len(chintaies)):
             madori = chintaies[k].find("td", class_="madori").string
             try:
-                price = chintaies[k].find("td", class_="price").find("span").string
+                price = float(chintaies[k].find("td", class_="price").find("span").string)
             except:
                 price = None
             chintai[station][madori] = price
