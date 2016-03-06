@@ -26,6 +26,7 @@ rosen_list = soup.find('div', class_="mod-rosenList")
 metro = rosen_list.find_all('div', class_="rosenType")[1]
 company_name = metro.find('p').text
 
+# かぶりありで路線名も入っている
 # lines = metro.find_all('li')
 # for i in xrange(0, len(lines)):
 #     station_name = lines[i].find('a').string
@@ -47,6 +48,7 @@ company_name = metro.find('p').text
 #                 price = None
 #             chintai[station_name][station][madori] = price
 
+# 路線名が入っていなくて、駅名にかぶりもない
 lines = metro.find_all('li')
 for i in xrange(0, len(lines)):
     station_name = lines[i].find('a').string
